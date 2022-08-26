@@ -6,7 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { OrdersModule } from './module/admin/orders/orders.module';
 import { ArticlesModule } from './module/admin/articles/articles.module';
 import { FocusModule } from './module/admin/focus/focus.module';
-
+import { UserManageModule } from './userManage/user.module'
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -18,6 +18,7 @@ import { FocusModule } from './module/admin/focus/focus.module';
     OrdersModule,
     ArticlesModule,
     FocusModule,
+    UserManageModule
   ],
 })
 export class AppModule {}

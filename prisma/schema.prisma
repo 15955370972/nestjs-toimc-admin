@@ -33,6 +33,18 @@ model Article {
   updatedAt   DateTime @updatedAt
 }
 
+model UserManage {// 管理侧-用户管理
+  id          Int      @id @default(autoincrement())// 用户id
+  userAccount String   // 用户账号
+  userName    String   // 用户姓名
+  portraitUrl String   // 用户头像
+  sex         Int      // 用户性别，0男性，1女性
+  birthday    DateTime // 用户生日
+  mobile      String   // 用户手机号
+  branch      String[] // 用户所属部门
+  status      Int   @default(0)// 用户状态，0成功，1失败，2冻结
+}
+
 // 订单
 model Orders {
   id                      Int      @id @default(autoincrement())
